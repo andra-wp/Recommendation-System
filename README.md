@@ -84,7 +84,7 @@ Variabel-variabel pada Spotify Song dataset adalah sebagai berikut:
 
 - #### Melihat Nama Kolom
   Menampilkan semua nama kolom yang tersedia dalam dataset menggunakan `df.columns`
-  <img width="905" height="205" alt="image" src="https://github.com/user-attachments/assets/ccec160f-6ed8-437a-bffa-caa1c75e24ee" />
+  <img width="905" height="205" alt="image" src="https://github.com/user-attachments/assets/ccec160f-6ed8-437a-bffa-caa1c75e24ee" />  
   Menampilkan list nama kolom agar nanti nya berguna untuk mempermudah feature selection 
 
 - #### Informasi Fitur dan Tipe Data
@@ -93,7 +93,7 @@ Variabel-variabel pada Spotify Song dataset adalah sebagai berikut:
   - Tipe data setiap kolom  
   - Jumlah non-null values  
   - Penggunaan memori dataset
-  - 
+  
 - #### Deteksi Missing Value
   Mengidentifikasi kolom yang memiliki nilai kosong (missing values) menggunakan
 `isnull().sum()` dan memfilter hanya kolom dengan missing values > 0.  
