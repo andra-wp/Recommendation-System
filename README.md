@@ -117,7 +117,7 @@ Berbeda dengan genre utama, distribusi sub-genre menunjukkan variasi yang lebih 
 Dari statistik deskriptif, track popularity memiliki rata-rata 42.48 dengan standar deviasi 24.98, menunjukkan dataset mengandung campuran lagu populer dan tidak populer. Durasi lagu rata-rata 225.8 detik (≈3.76 menit) dengan sebagian besar lagu berdurasi normal, meskipun terdapat outlier dengan durasi sangat pendek (4 detik) hingga sangat panjang (8.63 menit).
 
 - #### Korelasi Antar Fitur Numerik
-  <img width="1174" height="981" alt="image" src="https://github.com/user-attachments/assets/801c821d-00f8-4e0f-80e5-774a4b11d3b7" />
+  <img width="1175" height="971" alt="Screenshot 2026-01-16 220411" src="https://github.com/user-attachments/assets/7963bbcb-ed8b-4d3c-a386-b7ed519e5b71" />
 
   - Korelasi Positif Kuat:
 
