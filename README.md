@@ -117,7 +117,7 @@ Berbeda dengan genre utama, distribusi sub-genre menunjukkan variasi yang lebih 
 Dari statistik deskriptif, track popularity memiliki rata-rata 42.48 dengan standar deviasi 24.98, menunjukkan dataset mengandung campuran lagu populer dan tidak populer. Durasi lagu rata-rata 225.8 detik (≈3.76 menit) dengan sebagian besar lagu berdurasi normal, meskipun terdapat outlier dengan durasi sangat pendek (4 detik) hingga sangat panjang (8.63 menit).
 
 - #### Korelasi Antar Fitur Numerik
-  <img width="1226" height="976" alt="image" src="https://github.com/user-attachments/assets/b2faeaba-3838-4e7d-9501-6521340c2d10" />  
+  <img width="1174" height="981" alt="image" src="https://github.com/user-attachments/assets/801c821d-00f8-4e0f-80e5-774a4b11d3b7" />
 
   - Korelasi Positif Kuat:
 
@@ -262,3 +262,15 @@ $$\text{NDCG@5} = \frac{5.56}{5.82} \approx 0.955$$
 #### Popularity Based Recommendation  
 Metode ini merekomendasikan lagu-lagu paling populer berdasarkan play, likes, atau rating pengguna. Sistem ini bersifat global dan tidak personalisasi, sehingga tidak menggunakan metrik evaluasi seperti Precision@K, Recall@K, atau NDCG@K. Meskipun demikian, metode ini tetap berguna untuk menampilkan lagu-lagu populer dan memberikan rekomendasi awal bagi pengguna baru atau saat data interaksi terbatas.
 
+### Solusi dari Problem Statement
+#### 1. Bagaimana merancang sistem rekomendasi musik Spotify berbasis content-based filtering yang mampu merepresentasikan preferensi pengguna berdasarkan karakteristik konten lagu?
+
+Dalam proyek ini, saya merancang sistem rekomendasi musik yang memanfaatkan fitur konten lagu dari Spotify, seperti genre, artist, danceability, energy, dan valence. Saya membentuk profil pengguna dengan menghitung rata-rata fitur dari lagu-lagu yang pernah didengar atau sering diputar. Dengan cara ini, saya bisa merepresentasikan preferensi pengguna secara kuantitatif dalam bentuk vektor, lalu membandingkannya dengan lagu-lagu lain untuk menghasilkan rekomendasi yang sesuai dengan karakteristik lagu yang mereka sukai.
+
+#### 2.  Bagaimana menentukan dan memanfaatkan fitur konten lagu yang relevan untuk meningkatkan kualitas rekomendasi musik?
+
+Saya memilih fitur lagu berdasarkan kemampuannya untuk membedakan karakteristik tiap lagu dan relevansinya terhadap preferensi pengguna. Saya memanfaatkan kombinasi fitur numerik seperti danceability, energy, valence, dan fitur kategorikal seperti genre atau artist untuk membangun representasi lagu. Fitur-fitur ini saya olah dengan normalisasi dan kombinasi feature extraction, supaya perhitungan kemiripan lebih akurat. Dengan memfokuskan pada fitur yang relevan, saya berhasil meningkatkan kualitas rekomendasi yang diberikan oleh sistem.
+
+#### 3. Bagaimana mengukur tingkat kemiripan antar lagu secara efektif dalam sistem rekomendasi musik berbasis konten?
+
+Untuk mengukur kemiripan antar lagu, saya menggunakan metode seperti cosine similarity, yang memungkinkan saya membandingkan vektor fitur antar lagu dengan efektif. Kemiripan ini menjadi dasar rekomendasi lagu yang sesuai dengan profil pengguna. Selain itu, saya juga mengevaluasi sistem menggunakan metrik seperti Precision@K, Recall@K, dan NDCG@K, sehingga saya bisa menilai seberapa baik sistem saya merekomendasikan lagu-lagu yang relevan dengan preferensi pengguna.
